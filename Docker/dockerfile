@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/www/* && \ 
     mkdir -p /var/www/leila999.com/img && \
     chmod -R 754 /var/www/leila999.com/ && \
-    useradd leila999 && groupadd Dockumova \
+    useradd leila999 && groupadd Dockumova &&\
     usermod -aG Dockumova leila999 && \
     chown -R leila999:Dockumova /var/www/leila999.com/ && \
     sed -i 's/\/var\/www\/html/\/var\/www\/leila999.com/g' /etc/nginx/sites-enabled/default && \
